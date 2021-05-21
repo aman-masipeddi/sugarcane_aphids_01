@@ -60,10 +60,6 @@
 		<data>
 		2+d5mVCuqzjSdejxcgnTQaBOtHo=
 		</data>
-		<key>flutter_assets/assets/images/Sorghum%20Plant%20.png</key>
-		<data>
-		DkOywserM7fsKiXGE0GDsy09p4o=
-		</data>
 		<key>flutter_assets/assets/images/Sorghum_Plant.png</key>
 		<data>
 		DkOywserM7fsKiXGE0GDsy09p4o=
@@ -98,7 +94,7 @@
 		</data>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<data>
-		Hu2iPo5PxlBDp66caMA+VXr7u1Y=
+		HEjasAZPGHEkgDkfHCYeLckZ55Y=
 		</data>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -243,17 +239,6 @@
 			zBrWTpouDPL6sTjUalt0nqJrKljzYMBt0+XZWGT57k8=
 			</data>
 		</dict>
-		<key>flutter_assets/assets/images/Sorghum%20Plant%20.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			DkOywserM7fsKiXGE0GDsy09p4o=
-			</data>
-			<key>hash2</key>
-			<data>
-			1tu4D5jB1DKJ6MNDjAuzcA/K/OKPOl5F7pDKFqnrqPc=
-			</data>
-		</dict>
 		<key>flutter_assets/assets/images/Sorghum_Plant.png</key>
 		<dict>
 			<key>hash</key>
@@ -346,11 +331,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Hu2iPo5PxlBDp66caMA+VXr7u1Y=
+			HEjasAZPGHEkgDkfHCYeLckZ55Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			yjB81gBQArdmLSzboDn88+ID+7uLy19BeDqZfMAVUNg=
+			8fCxz8xV8CnggyCOiL7VuFm4QGwZuiaLHOsnBbWlbaU=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>

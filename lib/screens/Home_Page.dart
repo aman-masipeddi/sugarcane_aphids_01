@@ -87,6 +87,7 @@ class _HomePageState extends State<HomePage> {
 
 
     return Scaffold(
+        resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text("SCA Glance-N-Go Home Page", style: TextStyle(fontSize: 16),),
@@ -100,7 +101,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
           actions: <Widget>[
-            FlatButton(
+            TextButton(
               onPressed: () {
                 goToAboutPage();
               },
@@ -111,136 +112,146 @@ class _HomePageState extends State<HomePage> {
           ]
       ),
       body: Center(
-        child: Container(
-            margin: const EdgeInsets.all(5.0),
-          child: ListView(
-              children: <Widget>[
-                Image.asset(image, width: 500, height: 300),
-                SizedBox(height: 40,),
-                TextField(
-                  controller: titleController,
-                  style: textStyleTitle,
-                  decoration: InputDecoration(
-                      labelText: 'Field Name or Number',
-                      labelStyle: textStyleTitle,
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(5.0)
-                      )
-                  ),
-                ),
-                SizedBox(height: 15,),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Text(r"Control Cost($/Acre): ",
-                        style: textStyleTitle),
-                    SizedBox(width: 15,),
-                    DropdownButton<String>(
-                      value: selected_Acre_Cost,
-                      onChanged: (String newValue) {
-                        setState(() {
-                          selected_Acre_Cost = newValue;
-                        });
-                      },
-                      items: <String>[
-                        'Select',
-                        '12 or less',
-                        '13 - 17',
-                        '18 or more'
-                      ]
-                          .map<DropdownMenuItem<String>>((String value) {
-                        return DropdownMenuItem<String>(
-                          value: value,
-                          child: Text(value, style: textStyleTitle,),
-                        );
-                      }).toList(),
-                    ),
-                  ],
-                ),
-                SizedBox(height: 15,),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Text(r"Price of Grain($/Bushel): ",
-                        style: textStyleTitle),
-                    SizedBox(width: 15,),
-                    DropdownButton<String>(
-                      value: selected_Bushel_Cost,
-                      onChanged: (String newValue) {
-                        setState(() {
-                          selected_Bushel_Cost = newValue;
-                        });
-                      },
-                      items: <String>[
-                        'Select',
-                        '3.00 or less',
-                        '3.50',
-                        '4.00',
-                        '4.50 or more'
-                      ]
-                          .map<DropdownMenuItem<String>>((String value) {
-                        return DropdownMenuItem<String>(
-                          value: value,
-                          child: Text(value, style: textStyleTitle),
-                        );
-                      }).toList(),
-                    ),
-                  ],
-                ),
-                SizedBox(height: 15,),
-                Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Text("Is variety resistant to Sugarcane aphid?", style: textStyleTitle
-                      ),
-                    ]
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
+        child: SingleChildScrollView(
+          child: Container(
+            margin: const EdgeInsets.all(15.0),
+            child: Stack(
+              children: [
+             Column(
+    children: <Widget>[
+    Image.asset(image, width: 500, height: 300),
+    SizedBox(height: 40,),
+    TextField(
+    controller: titleController,
+    style: textStyleTitle,
+    autofocus: false,
+    decoration: InputDecoration(
+    labelText: 'Field Name or Number',
+    labelStyle: textStyleTitle,
+    border: OutlineInputBorder(
+    borderRadius: BorderRadius.circular(5.0)
+    )
+    ),
+    ),
+    SizedBox(height: 15,),
+    Row(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: <Widget>[
+    Text(r"Control Cost($/Acre): ",
+    style: textStyleTitle),
+    SizedBox(width: 15,),
+    DropdownButton<String>(
+    value: selected_Acre_Cost,
+    onChanged: (String newValue) {
+    setState(() {
+    selected_Acre_Cost = newValue;
+    });
+    },
+    items: <String>[
+    'Select',
+    '12 or less',
+    '13 - 17',
+    '18 or more'
+    ]
+        .map<DropdownMenuItem<String>>((String value) {
+    return DropdownMenuItem<String>(
+    value: value,
+    child: Text(value, style: textStyleTitle,),
+    );
+    }).toList(),
+    ),
+    ],
+    ),
+    SizedBox(height: 15,),
+    Row(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: <Widget>[
+    Text(r"Price of Grain($/Bushel): ",
+    style: textStyleTitle),
+    SizedBox(width: 15,),
+    DropdownButton<String>(
+    value: selected_Bushel_Cost,
+    onChanged: (String newValue) {
+    setState(() {
+    selected_Bushel_Cost = newValue;
+    });
+    },
+    items: <String>[
+    'Select',
+    '3.00 or less',
+    '3.50',
+    '4.00',
+    '4.50 or more'
+    ]
+        .map<DropdownMenuItem<String>>((String value) {
+    return DropdownMenuItem<String>(
+    value: value,
+    child: Text(value, style: textStyleTitle),
+    );
+    }).toList(),
+    ),
+    ],
+    ),
+    SizedBox(height: 15,),
+    Row(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: <Widget>[
+    Text("Is variety resistant to Sugarcane aphid?", style: textStyleTitle
+    ),
+    ]
+    ),
+    Row(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: <Widget>[
 
-                    SizedBox(width: 5,),
-                    Text("YES", style: textStyleTitle),
-                    Radio(
-                      value: 1,
-                      groupValue: group_Value_YorN,
-                      onChanged: (T) {
-                        setState(() {
-                          group_Value_YorN = T;
-                        });
-                      },
-                    ),
-                    SizedBox(width: 5,),
-                    Text("NO", style: textStyleTitle),
-                    Radio(
-                      value: 0,
-                      groupValue: group_Value_YorN,
-                      onChanged: (T) {
-                        setState(() {
-                          group_Value_YorN = T;
-                        });
-                      },
-                    ),
-                  ],
-                ),
-                FloatingActionButton(
-                  onPressed: () {
-                    _onPressed();
-                  },
-                  child: Text("Go"),
-                  backgroundColor: Colors.green,
-                ),
-                SizedBox(height: 50,)
-              ]
-          )
+    SizedBox(width: 5,),
+    Text("YES", style: textStyleTitle),
+    Radio(
+    value: 1,
+    groupValue: group_Value_YorN,
+    onChanged: (T) {
+    setState(() {
+    group_Value_YorN = T;
+    });
+    },
+    ),
+    SizedBox(width: 5,),
+    Text("NO", style: textStyleTitle),
+    Radio(
+    value: 0,
+    groupValue: group_Value_YorN,
+    onChanged: (T) {
+    setState(() {
+    group_Value_YorN = T;
+    });
+    },
+    ),
+    ],
+    ),
+    FloatingActionButton(
+    onPressed: () {
+    _onPressed();
+    },
+    child: Text("Go"),
+    backgroundColor: Colors.green,
+    ),
+    SizedBox(height: 50,),
+    ]
+    ),
+                Positioned(
+                    bottom: 0,
+                    right: 0,
+                    child: IconButton(
+                        onPressed: goToInstructionsPage,
+                        iconSize: 30.0,
+                        icon: new Icon(Icons.info_outline,
+                          color: Colors.black,)
+                    ))
+          ],
+    ),
         )
-      ),
-      floatingActionButton: IconButton(
-          onPressed: goToInstructionsPage,
-          iconSize: 30.0,
-          icon: new Icon(Icons.info_outline,
-            color: Colors.black,)
-      )
+    )
+    )
     );
   }
 

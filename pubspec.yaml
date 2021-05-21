@@ -19,6 +19,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  path: any
   sqflite: ^1.3.0
   path_provider: any
   intl: ^0.15.7

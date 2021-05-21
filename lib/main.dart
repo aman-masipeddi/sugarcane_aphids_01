@@ -62,7 +62,7 @@ class _MyAppState extends State<MyApp> {
                 Container(
                   width: 300,
                   height: 200,
-                  child: Text("Glance-N-Go™ Sampler for Sugarcane Aphid in Sorghum", style: TextStyle(fontWeight: FontWeight.bold), textAlign: TextAlign.center,
+                  child: Text("Glance-N-Go™ Sampler\n for Sugarcane Aphid in Sorghum", style: TextStyle(fontWeight: FontWeight.bold), textAlign: TextAlign.center,
                 )
                 )
               ],
