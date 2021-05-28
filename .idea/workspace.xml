@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="643c0058-0d1a-413d-8944-ac215e7e4320" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/4f2a58af27abc49ecf55570043bbf938.cache.dill.track.dill" beforeDir="false" afterPath="$PROJECT_DIR$/build/4f2a58af27abc49ecf55570043bbf938.cache.dill.track.dill" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/Home_Page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Home_Page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/Instructions_Page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Instructions_Page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sugarcanaphids01.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sugarcanaphids01.iml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

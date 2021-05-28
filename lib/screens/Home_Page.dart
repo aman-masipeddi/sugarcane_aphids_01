@@ -135,7 +135,7 @@ class _HomePageState extends State<HomePage> {
     ),
     SizedBox(height: 15,),
     Row(
-    mainAxisAlignment: MainAxisAlignment.center,
+    mainAxisAlignment: MainAxisAlignment.start,
     children: <Widget>[
     Text(r"Control Cost($/Acre): ",
     style: textStyleTitle),
@@ -164,11 +164,17 @@ class _HomePageState extends State<HomePage> {
     ),
     SizedBox(height: 15,),
     Row(
-    mainAxisAlignment: MainAxisAlignment.center,
+    mainAxisAlignment: MainAxisAlignment.start,
     children: <Widget>[
+      Expanded(
+        flex: 3,
+        child:
     Text(r"Price of Grain($/Bushel): ",
-    style: textStyleTitle),
-    SizedBox(width: 15,),
+    style: textStyleTitle),),
+    SizedBox(width: 1,),
+    Expanded(
+      flex: 2,
+      child:
     DropdownButton<String>(
     value: selected_Bushel_Cost,
     onChanged: (String newValue) {
@@ -189,7 +195,7 @@ class _HomePageState extends State<HomePage> {
     child: Text(value, style: textStyleTitle),
     );
     }).toList(),
-    ),
+    ),)
     ],
     ),
     SizedBox(height: 15,),
