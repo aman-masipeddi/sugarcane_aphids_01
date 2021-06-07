@@ -166,36 +166,32 @@ class _HomePageState extends State<HomePage> {
     Row(
     mainAxisAlignment: MainAxisAlignment.start,
     children: <Widget>[
-      Expanded(
-        flex: 3,
-        child:
     Text(r"Price of Grain($/Bushel): ",
-    style: textStyleTitle),),
-    SizedBox(width: 1,),
-    Expanded(
-      flex: 2,
-      child:
-    DropdownButton<String>(
-    value: selected_Bushel_Cost,
-    onChanged: (String newValue) {
-    setState(() {
-    selected_Bushel_Cost = newValue;
-    });
-    },
-    items: <String>[
-    'Select',
-    '3.00 or less',
-    '3.50',
-    '4.00',
-    '4.50 or more'
-    ]
-        .map<DropdownMenuItem<String>>((String value) {
-    return DropdownMenuItem<String>(
-    value: value,
-    child: Text(value, style: textStyleTitle),
-    );
-    }).toList(),
-    ),)
+    style: textStyleTitle),
+    SizedBox(width: 4,),
+            Container(
+              child: DropdownButton<String>(
+      value: selected_Bushel_Cost,
+      onChanged: (String newValue) {
+      setState(() {
+      selected_Bushel_Cost = newValue;
+      });
+      },
+      items: <String>[
+      'Select',
+      '3.00 or less',
+      '3.50',
+      '4.00',
+      '4.50 or more'
+      ]
+          .map<DropdownMenuItem<String>>((String value) {
+      return DropdownMenuItem<String>(
+      value: value,
+      child: Text(value, style: textStyleTitle),
+      );
+      }).toList(),
+      ),
+            ),
     ],
     ),
     SizedBox(height: 15,),
@@ -328,7 +324,7 @@ class _HomePageState extends State<HomePage> {
                 value = true;
                 ttValue = 0.45;
                 break;
-              case "4.0":
+              case "4.00":
                 value = true;
                 ttValue = 0.45;
                 break;
@@ -427,11 +423,6 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-  void _showSnackBar(BuildContext context, String message) {
-
-    final snackBar = SnackBar(content: Text(message));
-    Scaffold.of(context).showSnackBar(snackBar);
-  }
 
   void goToAboutPage(){
     Navigator.push(

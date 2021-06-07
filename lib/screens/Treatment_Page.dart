@@ -101,8 +101,8 @@ class _TreatmentPageState extends State<TreatmentPage>  {
   @override
   void initState() {
     result = "Start Sampling";
+    print(ttValue);
     super.initState();
-
   }
 
   @override
@@ -116,7 +116,7 @@ class _TreatmentPageState extends State<TreatmentPage>  {
       appBar: AppBar(
         title: Text(fieldTitle),
       ),
-      body: Center(
+      body: SingleChildScrollView(
         child:Padding(
         padding: EdgeInsets.only(top: 15.0, left: 10.0, right: 10.0, bottom: 50.0),
         child: Column(
@@ -777,116 +777,117 @@ class _TreatmentPageState extends State<TreatmentPage>  {
 //------------------------------------------------------------------//
 
   _tt_045(int total, int stops){ // 0.45 tt
-    if(stops<= 3){// less than 3 stops
-      result = "Keep Sampling";
-    }
-    else if(stops==4){ // 4 stops
-      if(total <=2)
-        result = "Dont Treat";
-      else if(total>=3 && total<=8)
-        result = "Keep Sampling";
-      else if(total>=9)
-        result = "Treat";
-    }
-    else if(stops==5){ // 5 stops
-      if(total <=3)
-        result = "Dont Treat";
-      else if(total>=4 && total<=9)
-        result = "Keep Sampling";
-      else if(total>=10)
-        result = "Treat";
-    }
-    else if(stops==6){ // 6 stops
-      if(total <=4)
-        result = "Dont Treat";
-      else if(total>=5 && total<=10)
-        result = "Keep Sampling";
-      else if(total>=11)
-        result = "Treat";
-    }
-    else if(stops==7){ // 7 stops
-      if(total <=6)
-        result = "Dont Treat";
-      else if(total>=7 && total<=11)
-        result = "Keep Sampling";
-      else if(total>=12)
-        result = "Treat";
-    }
-    else if(stops==8){ // 8 stops
-      if(total <=7)
-        result = "Dont Treat";
-      else if(total>=8 && total<=12)
-        result = "Keep Sampling";
-      else if(total>=13)
-        result = "Treat";
-    }
-    else if(stops==9){ // 9 stops
-      if(total <=9)
-        result = "Dont Treat";
-      else if(total>=10 && total<=14)
-        result = "Keep Sampling";
-      else if(total>=15)
-        result = "Treat";
-    }
-    else if(stops==10){ // 10 stops
-      if(total <=10)
-        result = "Dont Treat";
-      else if(total>=11 && total<=15)
-        result = "Keep Sampling";
-      else if(total>=16)
-        result = "Treat";
-    }
-    else if(stops==11){ // 11 stops
-      if(total <=11)
-        result = "Dont Treat";
-      else if(total>=12 && total<=17)
-        result = "Keep Sampling";
-      else if(total>=18)
-        result = "Treat";
-    }
-    else if(stops==12){ // 12 stops
-      if(total <=12)
-        result = "Dont Treat";
-      else if(total>=13 && total<=18)
-        result = "Keep Sampling";
-      else if(total>=19)
-        result = "Treat";
-    }
-    else if(stops==13){ // 13 stops
-      if(total <=14)
-        result = "Dont Treat";
-      else if(total>=15 && total<=20)
-        result = "Keep Sampling";
-      else if(total>=21)
-        result = "Treat";
-    }
-    else if(stops==14){ // 14 stops
-      if(total <=15)
-        result = "Dont Treat";
-      else if(total>=16 && total<=21)
-        result = "Keep Sampling";
-      else if(total>=22)
-        result = "Treat";
-    }
-    else if(stops==15){ // 15 stops
-      if(total <=17)
-        result = "Dont Treat";
-      else if(total>=18 && total<=22)
-        result = "Keep Sampling";
-      else if(total>=23)
-        result = "Treat";
-    }
-    else if(stops==16){ // 16 stops
-      if(total <=18)
-        result = "Dont Treat";
-      else if(total>=19 && total<=23)
-        result = "Keep Sampling";
-      else if(total>=24)
-        result = "Treat";
-    }
-    else
-      result = "Return in 2-3 Days";
+  if(stops<= 3){// less than 3 stops
+    result = "Keep Sampling";
   }
+  else if(stops==4){ // 4 stops
+    if(total <=2)
+      result = "Dont Treat";
+    else if(total>=3 && total<=8)
+      result = "Keep Sampling";
+    else if(total>=9)
+      result = "Treat";
+  }
+  else if(stops==5){ // 5 stops
+    if(total <=3)
+      result = "Dont Treat";
+    else if(total>=4 && total<=9)
+      result = "Keep Sampling";
+    else if(total>=10)
+      result = "Treat";
+  }
+  else if(stops==6){ // 6 stops
+    if(total <=4)
+      result = "Dont Treat";
+    else if(total>=5 && total<=10)
+      result = "Keep Sampling";
+    else if(total>=11)
+      result = "Treat";
+  }
+  else if(stops==7){ // 7 stops
+    if(total <=6)
+      result = "Dont Treat";
+    else if(total>=7 && total<=11)
+      result = "Keep Sampling";
+    else if(total>=12)
+      result = "Treat";
+  }
+  else if(stops==8){ // 8 stops
+    if(total <=7)
+      result = "Dont Treat";
+    else if(total>=8 && total<=12)
+      result = "Keep Sampling";
+    else if(total>=13)
+      result = "Treat";
+  }
+  else if(stops==9){ // 9 stops
+    if(total <=9)
+      result = "Dont Treat";
+    else if(total>=10 && total<=14)
+      result = "Keep Sampling";
+    else if(total>=15)
+      result = "Treat";
+  }
+  else if(stops==10){ // 10 stops
+    if(total <=10)
+      result = "Dont Treat";
+    else if(total>=11 && total<=15)
+      result = "Keep Sampling";
+    else if(total>=16)
+      result = "Treat";
+  }
+  else if(stops==11){ // 11 stops
+    if(total <=11)
+      result = "Dont Treat";
+    else if(total>=12 && total<=17)
+      result = "Keep Sampling";
+    else if(total>=18)
+      result = "Treat";
+  }
+  else if(stops==12){ // 12 stops
+    if(total <=12)
+      result = "Dont Treat";
+    else if(total>=13 && total<=18)
+      result = "Keep Sampling";
+    else if(total>=19)
+      result = "Treat";
+  }
+  else if(stops==13){ // 13 stops
+    if(total <=14)
+      result = "Dont Treat";
+    else if(total>=15 && total<=20)
+      result = "Keep Sampling";
+    else if(total>=21)
+      result = "Treat";
+  }
+  else if(stops==14){ // 14 stops
+    if(total <=15)
+      result = "Dont Treat";
+    else if(total>=16 && total<=21)
+      result = "Keep Sampling";
+    else if(total>=22)
+      result = "Treat";
+  }
+  else if(stops==15){ // 15 stops
+    if(total <=17)
+      result = "Dont Treat";
+    else if(total>=18 && total<=22)
+      result = "Keep Sampling";
+    else if(total>=23)
+      result = "Treat";
+  }
+  else if(stops==16){ // 16 stops
+    if(total <=18)
+      result = "Dont Treat";
+    else if(total>=19 && total<=23)
+      result = "Keep Sampling";
+    else if(total>=24)
+      result = "Treat";
+  }
+  else
+    result = "Return in 2-3 Days";
+}
+
 //------------------------------------------------------------------//
 
   _tt_05(int total, int stops){ // 0.50 tt
@@ -1002,3 +1003,5 @@ class _TreatmentPageState extends State<TreatmentPage>  {
   }
 
 }
+
+

@@ -63,7 +63,7 @@ class _AboutPageState extends State<AboutPage>  {
                 SizedBox(height: 40,),
                 Text("DEVELOPMENT TEAM", style: TextStyle(fontSize: 20, fontStyle: FontStyle.italic, decoration: TextDecoration.underline, fontWeight: FontWeight.bold),),
                 SizedBox(height: 10,),
-                Text("This App was developed with financial support provided by the U.S. Department of Agriculture National Institute of Food and Agriculture&#39;s Crop Protection and Pest Management Applied Research and Development Program (grant no. 2015-7006-24259/project accession no. 1007751 and the Extension Implementation Program (grant no. 2017-7006-27282/project accession no. 1014126).",
+                Text("This App was developed with financial support provided by the U.S. Department of Agriculture National Institute of Food and Agriculture, Crop Protection and Pest Management Applied Research and Development Program (grant no. 2015-7006-24259/project accession no. 1007751 and the Extension Implementation Program (grant no. 2017-7006-27282/project accession no. 1014126).",
                   style: TextStyle(fontSize: 15), textAlign: TextAlign.justify,),
                 SizedBox(height: 15,),
                 Align(
@@ -71,7 +71,7 @@ class _AboutPageState extends State<AboutPage>  {
                   child: Text("Developers:", textAlign: TextAlign.left, style: TextStyle(fontSize: 15, fontStyle: FontStyle.italic, fontWeight: FontWeight.bold) ),
                 ),
                 SizedBox(height: 5,),
-                Text("Aman Masipeddi(Programmer), Tom A. Royer(Extension Entomologist) and Brian Arnall(Oklahoma State University). Contributors: Jessica Lindenmayer (Trécé Incorporated), Kristopher Giles(Oklahoma State University) , Norman C. Elliott (USDA ARS), Allen Knutson (Texas A&M Agrilife Research and Extension), Robert Bowling (Texas A&amp;M Agrilife Research and Extension) Nicholas J. Seiter(University of Arkansas Research and Extension), Brian McCornack (Kansas State University), Sebe A.Brown (Louisiana State University).",
+                Text("Aman Masipeddi(Programmer), Tom A. Royer(Extension Entomologist) and Brian Arnall(Oklahoma State University). Contributors: Jessica Lindenmayer (Trécé Incorporated), Kristopher Giles(Oklahoma State University) , Norman C. Elliott (USDA ARS), Allen Knutson (Texas A&M Agrilife Research and Extension), Robert Bowling (Texas A&M Agrilife Research and Extension) Nicholas J. Seiter(University of Arkansas Research and Extension), Brian McCornack (Kansas State University), Sebe A.Brown (Louisiana State University).",
                   style: TextStyle(fontSize: 15), textAlign: TextAlign.justify,),
                 SizedBox(height: 10,),
                 Image.asset('assets/images/Sorghum_Plant.png', width: 200, height: 200),
