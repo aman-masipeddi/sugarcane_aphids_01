@@ -116,7 +116,8 @@ class _TreatmentPageState extends State<TreatmentPage>  {
       appBar: AppBar(
         title: Text(fieldTitle),
       ),
-      body: SingleChildScrollView(
+      body: SingleChildScrollView
+        (
         child:Padding(
         padding: EdgeInsets.only(top: 15.0, left: 10.0, right: 10.0, bottom: 50.0),
         child: Column(
